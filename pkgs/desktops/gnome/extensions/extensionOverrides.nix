@@ -4,7 +4,6 @@
   cpio,
   cups,
   ddcutil,
-  easyeffects,
   gjs,
   glib,
   gnome-menus,
@@ -127,15 +126,6 @@ lib.trivial.pipe super [
       rm "$out/share/gnome-shell/extensions/display-brightness-ddcutil@themightydeity.github.com/schemas/gschemas.compiled"
       glib-compile-schemas "$out/share/gnome-shell/extensions/display-brightness-ddcutil@themightydeity.github.com/schemas"
     '';
-  }))
-
-  (patchExtension "eepresetselector@ulville.github.io" (old: {
-    patches = [
-      # Needed to find the currently set preset
-      (replaceVars ./extensionOverridesPatches/eepresetselector_at_ulville.github.io.patch {
-        easyeffects_gsettings_path = "${glib.getSchemaPath easyeffects}";
-      })
-    ];
   }))
 
   (patchExtension "freon@UshakovVasilii_Github.yahoo.com" (old: {
