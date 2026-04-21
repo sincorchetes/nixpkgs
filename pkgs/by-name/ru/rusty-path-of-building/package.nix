@@ -19,16 +19,16 @@
 }:
 rustPlatform.buildRustPackage (finalAttrs: {
   pname = "rusty-path-of-building";
-  version = "0.2.13";
+  version = "0.2.15";
 
   src = fetchFromGitHub {
     owner = "meehl";
     repo = "rusty-path-of-building";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-4lxMQfENucDaDZov82iZD5DMgksLuJ/2nXUKYYf/m/w=";
+    hash = "sha256-YhCJkyzWVZ1BEux85qyTHlyLS/LaotMoe+tGwwd9EOI=";
   };
 
-  cargoHash = "sha256-PeVVDOWFYoDKkCy+UV5ikFwrHTK93zt2WZ3Oxp0ez1Y=";
+  cargoHash = "sha256-B04Jf3G7UVwhzVY1mO6IUqb1AXpvJQs+aWggMhYPHRw=";
 
   nativeBuildInputs = [
     pkg-config
@@ -121,7 +121,10 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/meehl/rusty-path-of-building";
     changelog = "https://github.com/meehl/rusty-path-of-building/blob/${finalAttrs.src.rev}/CHANGELOG.md";
     license = lib.licenses.mit;
-    maintainers = with lib.maintainers; [ k900 ];
+    maintainers = with lib.maintainers; [
+      k900
+      cholli
+    ];
     mainProgram = "rusty-path-of-building";
   };
 })

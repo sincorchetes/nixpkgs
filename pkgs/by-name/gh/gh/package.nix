@@ -10,16 +10,16 @@
 
 buildGoModule (finalAttrs: {
   pname = "gh";
-  version = "2.87.3";
+  version = "2.90.0";
 
   src = fetchFromGitHub {
     owner = "cli";
     repo = "cli";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-F4xUwj/krB5vjIfnvmwySlztBrcxJ+k1GvXb2gs7eXY=";
+    hash = "sha256-yVc4UvC+CsW+pP/BJRjcOGX7h8zO2M8yM0m57Mr89JY=";
   };
 
-  vendorHash = "sha256-POrm4lHEO2Eti7dbohKBwXW+DTs22EUZX+tMNUCL3lg=";
+  vendorHash = "sha256-hz6oMLTibnSLB11vEWsO0O5ZFGKYJaVce6POqINObnI=";
 
   nativeBuildInputs = [ installShellFiles ];
 
@@ -63,6 +63,7 @@ buildGoModule (finalAttrs: {
     maintainers = with lib.maintainers; [
       mdaniels5757
       zowoq
+      savtrip
     ];
   };
 })

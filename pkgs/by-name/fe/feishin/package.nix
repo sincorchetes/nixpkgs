@@ -16,13 +16,13 @@
 }:
 let
   pname = "feishin";
-  version = "1.8.0";
+  version = "1.11.0";
 
   src = fetchFromGitHub {
     owner = "jeffvli";
     repo = "feishin";
     tag = "v${version}";
-    hash = "sha256-sd6j3gPtNFN1hMiOMIiTICNH8mYJvO9FSXPqUFotis8=";
+    hash = "sha256-TSjgjNHhPSZ4k7zZTH5e3FCkl6d7B/2w2WCt0S5OW0g=";
   };
 
   electron = electron_39;
@@ -43,7 +43,7 @@ buildNpmPackage {
       ;
     pnpm = pnpm_10_29_2;
     fetcherVersion = 3;
-    hash = "sha256-XhBcZRa66QdkjXxbefzsBUdvPIEshorq1uqzoWMXuTc=";
+    hash = "sha256-2fLqqCbbCIPoW/wGzsZOpZd5tnvyrLYlrVhbFWixlDM=";
   };
 
   env.ELECTRON_SKIP_BINARY_DOWNLOAD = "1";

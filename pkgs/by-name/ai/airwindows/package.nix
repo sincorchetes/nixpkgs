@@ -8,13 +8,13 @@
 }:
 stdenv.mkDerivation {
   pname = "airwindows";
-  version = "0-unstable-2026-02-22";
+  version = "0-unstable-2026-04-11";
 
   src = fetchFromGitHub {
     owner = "airwindows";
     repo = "airwindows";
-    rev = "e78819e1ec1d77a93057c6bf8ef0eba0293ed782";
-    hash = "sha256-TH5FOTtnYNzlM1tysCbSO1wNFxyPSg5n9jUmFli5NJw=";
+    rev = "7f9131b826e12b2dabe8a06c7cc4b002b9952be1";
+    hash = "sha256-Rt4Q/fxh181bPFAhD3WgEVbq0ClQfhGjJoHa99lgguw=";
   };
 
   # we patch helpers because honestly im spooked out by where those variables

@@ -8,9 +8,11 @@
 
   # dependencies
   click,
-  langgraph,
+  httpx,
   langgraph-runtime-inmem,
   langgraph-sdk,
+  langgraph,
+  pathspec,
   python-dotenv,
 
   # testing
@@ -24,14 +26,14 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "langgraph-cli";
-  version = "0.4.14";
+  version = "0.4.23";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "langchain-ai";
     repo = "langgraph";
     tag = "cli==${finalAttrs.version}";
-    hash = "sha256-DtIIGNcpgcYMvvihH9GwgCn2PRWq+LEcHVtitA71T04=";
+    hash = "sha256-nF6w1SUEFECSv87TbvNpNGiv1wFbKsDlUy8MprTdG70=";
   };
 
   sourceRoot = "${finalAttrs.src.name}/libs/cli";
@@ -40,7 +42,10 @@ buildPythonPackage (finalAttrs: {
 
   dependencies = [
     click
+    httpx
     langgraph-sdk
+    pathspec
+    python-dotenv
   ];
 
   optional-dependencies = {

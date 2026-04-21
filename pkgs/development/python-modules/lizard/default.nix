@@ -11,14 +11,14 @@
 
 buildPythonPackage rec {
   pname = "lizard";
-  version = "1.20.0";
+  version = "1.21.6";
   format = "setuptools";
 
   src = fetchFromGitHub {
     owner = "terryyin";
     repo = "lizard";
     tag = version;
-    hash = "sha256-HNpCg/ScD0aDdpVXA9Nb9QU+4ww6Kp2qIeu9Lj0O7A4=";
+    hash = "sha256-ZRXO9XijsZdtDffEvQ6iYVr8PKP93JD01L/bg9NOEpM=";
   };
 
   propagatedBuildInputs = [
